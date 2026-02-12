@@ -19,4 +19,8 @@ async function registerTask(title, description, deadline, userId, subjectId) {
   return { taskId };
 }
 
-module.exports = { registerTask };
+async function listTasks(userId) {
+  return await taskRepository.findAll(userId);
+}
+
+module.exports = { registerTask, listTasks };
