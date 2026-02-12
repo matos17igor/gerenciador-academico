@@ -11,7 +11,6 @@ app.use(express.json());
 
 app.use("/users", userRoutes);
 app.use("/auth", authRoutes);
-
 app.use("/tasks", taskRoutes);
 
 app.listen(PORT, () => {

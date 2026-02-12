@@ -15,7 +15,7 @@ async function create(req, res) {
 
     return res.status(201).json(register);
   } catch (error) {
-    return res.stauts(400).json({ error: error.message });
+    return res.status(400).json({ error: error.message });
   }
 }
 
