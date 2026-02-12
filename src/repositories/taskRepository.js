@@ -16,4 +16,14 @@ async function create(task) {
   return result.insertId;
 }
 
-module.exports = { create };
+async function findAll(userId) {
+  const sql = `
+    SELECT * FROM tasks
+    WHERE user_id = ?
+  `;
+
+  const [rows] = await db.execute(sql, [userId]);
+  return rows;
+}
+
+module.exports = { create, findAll };
