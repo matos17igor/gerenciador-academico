@@ -13,5 +13,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", taskController.create);
+router.get("/", taskController.list);
 
 module.exports = router;
